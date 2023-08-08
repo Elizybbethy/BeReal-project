@@ -1,27 +1,75 @@
-{%load static%}
+{% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACCESSING ELEMENTS IN THE DOM</title>
-    <link rel="stylesheet" href= {% static 'css/sytle.css'%}>
-</head>
-<body>
-    <h1>ACCESSING ELEMENTS IN THE DOM</h1>
-    <h2>ID (#demo)</h2>
-    <div id="demo">Access me by Id</div>
-    <h2>class(.demo)</h2>
-    <div class="demo"></div>Access me by class(1)</div>
-    <div class="demo"></div> Access me by class(2)</div>
-    <h2>Tag(article)</h2>
-    <article>Access me by tag(1)</article>
-    <article>Access me by tag(2)</article>
-    <h2>Query Selector</h2>
-    <div id="demo-query">Acess me by query</div>
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel='stylesheet' href="{% static 'css/motor.css' %}">
 
-    <h2>Query Selector all</h2>
-    <div class="demo-query-all">access me by query all (1)</div>
-    <div class="demo-query-all">access me by query all (2)</div>
+</head>
+
+<body>
+
+
+    <nav class="nav navbar navbar-expand-lg " style="background-color: #c4d1de;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'css/images/motorlogo.jpg'%}" alt="Logo" width="36" height="30"
+                    class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                </ul>
+
+                <div class="dropdown">
+                    <span class="navbar-toggler-icon">
+                        <button class="dropdown-button" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Login</a>
+                            <a class="dropdown-item" href="#">Others</a>
+                            <a class="dropdown-item" href="/logout">LogOut</a>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="card" style="width:fit-content">
+                <img src="{% static 'css/images/8.jpg'%}">
+                <div class="card-body">
+                    <h1 class="card-title">BeRealMotors Spare Company</h1>
+                    <p class="card-text">Powering Your Drive, Anytime, Anywhere!</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+
 </html>

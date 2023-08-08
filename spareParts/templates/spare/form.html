@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCESSING ELEMENTS IN THE DOM</title>
+    <link rel="stylesheet" href="{% static 'css/sytle.css' %}">
+</head>
+
+<body>
+    <h1>ACCESSING ELEMENTS IN THE DOM</h1>
+    <h2>ID (#demo)</h2>
+    <div id="demo">Access me by Id</div>
+    <h2>class(.demo)</h2>
+    <div class="demo">Access me by class(1)</div>
+    <div class="demo"></div> Access me by class(2)</div>
+    <h2>Tag(article)</h2>
+    <article>Access me by tag(1)</article>
+    <article>Access me by tag(2)</article>
+    <h2>Query Selector</h2>
+    <div id="demo-query">Acess me by query</div>
+
+    <h2>Query Selector all</h2>
+    <div class="demo-query-all">access me by query all (1)</div>
+    <div class="demo-query-all">access me by query all (2)</div>
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+
+</html>

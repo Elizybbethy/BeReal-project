@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'spareApp',
+    'crispy_forms',
+    'crispy_bootstrap4',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +125,11 @@ STATIC_URL = '/static/' #definig static files that come with django.
 #define static path to our static files
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATICFILES_DIR = [os.path.join(BASE_DIR,'spareApp/static')]
+
+
+#Creating the base pack for crispy forms
+CRISPY_TEMPLATE_PACK ='bootstrap4'
+
+#handling redirecting login to successful user
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'logout'

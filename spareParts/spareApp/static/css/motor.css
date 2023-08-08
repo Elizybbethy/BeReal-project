@@ -1,0 +1,42 @@
+.nav {
+    color: aliceblueg;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+}
+
+.words {
+    background-color: #3F000F;
+    color: aliceblue;
+    padding: 50px;
+    font-size: 40px;
+}
+
+body {
+    background-image: url('./images/bac2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.card {
+    border: 6px solid #3F000F;
+    margin: 180px;
+    
+}
+
+.card-text {
+    text-align: center;
+    color: #833C5C;
+    font-size: 20px;
+    background-color: ;
+}
+
+.card-title {
+    text-align: center;
+    color: #194F7F;
+
+}
