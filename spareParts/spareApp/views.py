@@ -96,6 +96,25 @@ def add_to_stock(request, pk):
             return redirect('home')
     return render(request,'spare/add_to_stock.html',{'form':form})
 
+#this view is for user registration
+def register(request):
+    #this get method gets the entered data on the form
+    if request.method == 'GET':
+        form = RegisterForm()
+        return render(request, 'spare/register.html', {'form': form})
+    #This method posts the data entered into the form
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.username = user.username.lower()
+            user.save()
+            #This redirects to the login page
+            return redirect('login')
+        else:
+            #This incase the login fails the user stays on the register page
+            return render(request, 'spare/register.html', {'form':form})
+
 #delete function view
 @login_required
 def delete_product(request, product_id):

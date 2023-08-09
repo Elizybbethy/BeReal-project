@@ -1,0 +1,14 @@
+{% extends 'spare/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form method="POST" novaliate>
+     
+    {% csrf_token %}
+    <h2>Register Here!</h2>
+
+    {{form | crispy }}
+     <input type="submit" name="Register" class="btn btn-info btn-primary btn-block">
+</form>
+{% endblock %}
