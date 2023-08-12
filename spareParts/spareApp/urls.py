@@ -2,7 +2,6 @@ from django.urls import path
 
 #let's reuse the django login view
 from django.contrib.auth import views as auth_views
-
 from spareApp import views
 
 urlpatterns = [
